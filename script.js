@@ -4,11 +4,25 @@ const subtract = (a, b) => a - b;
 const multiply = (a, b) => a * b;
 const divide = (a, b) => a / b;
 
-// console.log(add(10, 2));
-// console.log(subtract(10, 2));
-// console.log(multiply(10, 2));
-// console.log(divide(10, 2));
 
 let num1;
 let operator;
 let num2;
+
+const operations = {
+    "+": add, 
+    "-": subtract,
+    "*": multiply,
+    "/": divide, 
+};
+
+function operate(num1, operator, num2) {
+  const action = operations[operator];
+  
+  if (!action) {
+    console.error(`Invalid operator: ${operator}`);
+    return null;
+  }
+
+  return action(num1, num2);
+}
