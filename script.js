@@ -8,3 +8,7 @@ const divide = (a, b) => a / b;
 // console.log(subtract(10, 2));
 // console.log(multiply(10, 2));
 // console.log(divide(10, 2));
+
+let num1;
+let operator;
+let num2;
