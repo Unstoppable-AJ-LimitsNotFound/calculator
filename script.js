@@ -27,16 +27,13 @@ function operate(num1, operator, num2) {
   return action(num1, num2);
 }
 
+const display = document.querySelector("#display");
 
-// const buttonContainer = document.querySelector("#button-container");
-
-// for (let i = 0; i < 18; i++) {
-//   const calcBtn = document.createElement("button");
-//   calcBtn.classList.add("calcBtn");
-
-//   if (i === 0) {
-//     calcBtn.id = "clearBtn";
-//   }
-
-//   buttonContainer.appendChild(calcBtn);
-// }
+const numButtons = document.querySelectorAll("#numBtn");
+numButtons.forEach((numBtn) => {
+  numBtn.addEventListener("click", () => {
+    num1 = numBtn.textContent;
+    display.textContent = num1;
+    display.style.color = "white";
+  });
+});
